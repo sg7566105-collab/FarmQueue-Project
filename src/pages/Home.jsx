@@ -8,15 +8,15 @@ function Home() {
     <>
       <div className="flex items-start gap-5 ">
         {/* hero and card container */}
-        <div className="flex flex-col  ml-3">
+        <div className="rounded-md">
           <Hero />
-          <Section1 />
+         
         </div>
         {/* tableinfoo div  */}
-        <div className="bg-green-100 px-5 w-full mx-2 rounded-3xl pb-5 flex flex-col gap-10 mt-5">
+        {/* <div className="bg-green-100 px-5 w-full mx-2 rounded-3xl pb-5 flex flex-col gap-10 mt-5">
             <h1 className="font-bold text-2xl mt-3 ">आज की जानकरी</h1>
           <Todayinfo />
-        </div>
+        </div> */}
       </div>
       <Section2/>
     </>

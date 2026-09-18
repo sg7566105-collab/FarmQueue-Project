@@ -13,40 +13,6 @@ const Navbar = () => {
           <img src={homeImage} alt=""  className="h-5 w-5 mr-2"/> होम
         </a>
 
-        <a
-          href="#"
-          className="flex items-center px-5 transition-all duration-300 hover:bg-red-800"
-        >
-          स्लॉट बुक करें
-        </a>
-
-        <a
-          href="#"
-          className="flex items-center px-5 transition-all duration-300 hover:bg-red-800"
-        >
-          कतार स्थिति
-        </a>
-
-        <a
-          href="#"
-          className="flex items-center px-5 transition-all duration-300 hover:bg-red-800"
-        >
-          खरीद स्थिति
-        </a>
-
-        <a
-          href="#"
-          className="flex items-center px-5 transition-all duration-300 hover:bg-red-800"
-        >
-          भुगतान स्थिति
-        </a>
-
-        <a
-          href="#"
-          className="flex items-center px-5 transition-all duration-300 hover:bg-red-800"
-        >
-          सूचनाएँ
-        </a>
 
         <a
           href="#"

@@ -1,6 +1,7 @@
 import React from 'react'
-
+import {useNavigate} from 'react-router-dom'
 const Header = () => {
+    const navigate=useNavigate();
   return (
     <header className='flex h-22.5 items-center justify-between bg-white px-12'>
         {/* logo */}
@@ -23,7 +24,7 @@ const Header = () => {
         </div>
         {/* buttonn */}
         <div className='flex items-center'>
-             <button className='border-2 bg-green-800 px-5 py-2.5  rounded-md font-semibold text-white transition-all duration-300 hover:bg-green-900'>
+             <button className='border-2 bg-green-800 px-5 py-2.5  rounded-md font-semibold text-white transition-all duration-300 hover:bg-green-900' onClick={()=>navigate("/login")}>
                     👤 लॉगिन करें
              </button>
              <button className='border-2 bg-white text-green-800 px-5 py-2.5 rounded-md font-semibold transition-all duration-300 hover:bg-green-800 hover:text-white'>

@@ -6,7 +6,7 @@ const section1 = () => {
   return (
     
       <div className="w-290 overflow-hidden">
-        <CardContainer />
+      
       </div>
       
     
