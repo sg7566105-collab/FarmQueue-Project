@@ -1,1 +1,12 @@
 @import "tailwindcss";
+*{
+    user-select: none;
+
+}
+input,textarea{
+    user-select: text;
+}
+img{
+    user-select: none;
+    -webkit-user-drag: none;
+}

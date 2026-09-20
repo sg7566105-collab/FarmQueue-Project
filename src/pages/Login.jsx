@@ -1,12 +1,13 @@
 import React from "react";
+import farmbg from "../assets/background1.jpeg"
 import { useNavigate } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen bg-[#F5F7F2] px-6 py-12">
+    <div className="min-h-screen bg-[#F5F7F2] px-6 py-12" style={{backgroundImage:`url(${farmbg})`}}>
       <button
         onClick={() => navigate("/")}
-        className="rounded-lg border-2 border-green-700 px-5 py-2.5 font-semibold text-green-700 transition hover:bg-green-700 hover:text-white"
+        className="rounded-lg border-2 border-green-700 px-5 py-2.5 font-semibold text-green-700 transition hover:bg-green-700 hover:text-white bg-green-100"
       >
         ← Back to Home
       </button>
@@ -19,14 +20,14 @@ const Login = () => {
       </div>
 
       {/* Login Box */}
-      <div className="mx-auto mt-8 max-w-5xl rounded-2xl bg-white p-8 shadow-lg">
+      <div className="mx-auto mt-8 max-w-5xl rounded-2xl bg-white/30 backdrop-blur-sm border border-white/30 p-8 shadow-2xl">
         <h2 className="text-center text-2xl font-bold text-gray-800">
           आप किस रूप में लॉगिन करना चाहते हैं?
         </h2>
 
         <div className="mt-8 grid gap-7 md:grid-cols-2">
           {/* Seller Card */}
-          <div className="rounded-2xl border border-green-200 bg-green-50 p-8 text-center transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+          <div className="rounded-2xl border border-green-100 bg-green/30 backdrop-blur-sm p-8 text-center transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-green-400">
             <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-white text-5xl shadow">
               👨‍🌾
             </div>
@@ -46,7 +47,7 @@ const Login = () => {
           </div>
 
           {/* Buyer Card */}
-          <div className="rounded-2xl border border-orange-200 bg-orange-50 p-8 text-center transition duration-300 hover:-translate-y-1 hover:shadow-lg">
+          <div className="rounded-2xl border border-orange-100 bg-orange/30 backdrop-blur-sm p-8 text-center transition duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-orange-400">
             <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-white text-5xl shadow">
               🛒
             </div>

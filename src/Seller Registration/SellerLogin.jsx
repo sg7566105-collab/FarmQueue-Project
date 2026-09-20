@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 
 const SellerLogin = () => {
   const navigate = useNavigate();
+  
 
   return (
     <div className="min-h-screen bg-[#F5F7F2] px-5 py-10">

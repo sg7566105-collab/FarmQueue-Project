@@ -1,17 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import farmbg from "../assets/background1.jpeg"
 const Registration = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-[#F5F7F2] px-6 py-12">
+    <div className="min-h-screen bg-[#F5F7F2] px-6 py-12"  style={{backgroundImage:`url(${farmbg})`}}>
 
       {/* Back to Home */}
-      <div className="mx-auto max-w-5xl">
+      <div className=" max-w-5xl mr-30">
         <button
           onClick={() => navigate("/login")}
-          className="rounded-lg border-2 border-green-700 px-5 py-2.5 font-semibold text-green-700 transition hover:bg-green-700 hover:text-white"
+          className="rounded-lg border-2 border-green-700 px-5 py-2.5 font-semibold bg-green-200 text-green-700 transition hover:bg-green-700 hover:text-white"
         >
           ← Back to Login
         </button>
@@ -29,10 +29,10 @@ const Registration = () => {
       </div>
 
       {/* Cards */}
-      <div className="mx-auto mt-10 grid max-w-4xl gap-8 md:grid-cols-2">
+      <div className="mx-auto mt-10 grid max-w-4xl gap-8 md:grid-cols-2 ">
 
         {/* Seller */}
-        <div className="rounded-2xl border border-green-200 bg-green-50 p-8 text-center shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+        <div className="rounded-2xl border border-green-200 bg-green/30 p-8 backdrop-blur-sm text-center shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl">
 
           <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-white text-5xl shadow">
             👨‍🌾
@@ -58,7 +58,7 @@ const Registration = () => {
 
 
         {/* Buyer */}
-        <div className="rounded-2xl border border-orange-200 bg-orange-50 p-8 text-center shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+        <div className="rounded-2xl border border-orange-200 bg-orange/30 backdrop-blur-sm p-8 text-center shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl">
 
           <div className="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-white text-5xl shadow">
             🛒

@@ -20,14 +20,14 @@ const Header = () => {
         {/* searchh */}
         <div className="flex border-2 h-11 w-107 items-center rounded-full border-gray-300 px-4 hover:bg-gray-300 transition-all duration-400">
             <span className='text-xl text-gray-500 mr-3'> ⌕ </span>
-            <input type="text" placeholder='यहाँ खोजें...' className=' flex items-center gap-3 ' />
+            <input type="text" placeholder='यहाँ खोजें...' className=' flex items-center gap-3 focus:outline-none focus:ring-0 ' />
         </div>
         {/* buttonn */}
         <div className='flex items-center'>
              <button className='border-2 bg-green-800 px-5 py-2.5  rounded-md font-semibold text-white transition-all duration-300 hover:bg-green-900' onClick={()=>navigate("/login")}>
                     👤 लॉगिन करें
              </button>
-             <button className='border-2 bg-white text-green-800 px-5 py-2.5 rounded-md font-semibold transition-all duration-300 hover:bg-green-800 hover:text-white'>
+             <button className='border-2 bg-white text-green-800 px-5 py-2.5 rounded-md font-semibold transition-all duration-300 hover:bg-green-800 hover:text-white' onClick={()=> navigate("/Registration")}>
                     👤 पंजीकरण करें
              </button>
         </div>

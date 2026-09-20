@@ -12,6 +12,7 @@ import SellerRegistration from './Seller Registration/SellerRegistration';
 import BuyerRegistration from './Buyer/BuyerRegistration';
 import SellerLogin from './Seller Registration/SellerLogin';
 import BuyerLogin from './Buyer/BuyerLogin';
+import SellerDashboard from './Seller Dashboard/SellerDashboard';
 
 const App = () => {
   return (
@@ -41,6 +42,7 @@ const App = () => {
       <Route path="/BuyerRegistration" element={<BuyerRegistration/>}/>
       <Route path="/SellerLogin" element={<SellerLogin/>}/>
       <Route path="/BuyerLogin" element={<BuyerLogin/>}/>
+      <Route path="/SellerDashboard" element={<SellerDashboard/>}/>
 
     </Routes>
   )
