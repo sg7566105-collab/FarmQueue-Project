@@ -1,9 +1,27 @@
-import React, {useState} from "react";
+
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const SellerLogin = () => {
   const navigate = useNavigate();
-  
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    // Demo login credentials
+    if (
+      (email === "seller@gmail.com" || email === "9876543210") &&
+      password === "seller123"
+    ) {
+      localStorage.setItem("seller", "loggedIn");
+      navigate("/SellerDashboard");
+    } else {
+      alert("Invalid email/mobile number or password");
+    }
+  };
 
   return (
     <div className="min-h-screen bg-[#F5F7F2] px-5 py-10">
@@ -24,7 +42,6 @@ const SellerLogin = () => {
 
         {/* Icon & Heading */}
         <div className="text-center">
-
           <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-green-100 text-4xl">
             👨‍🌾
           </div>
@@ -36,12 +53,10 @@ const SellerLogin = () => {
           <p className="mt-2 text-gray-600">
             किसान के रूप में अपने अकाउंट में लॉगिन करें
           </p>
-
         </div>
 
-
         {/* Form */}
-        <form className="mt-8 space-y-5">
+        <form onSubmit={handleLogin} className="mt-8 space-y-5">
 
           {/* Mobile / Email */}
           <div>
@@ -51,11 +66,13 @@ const SellerLogin = () => {
 
             <input
               type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="मोबाइल नंबर या ईमेल दर्ज करें"
               className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-green-600 focus:ring-2 focus:ring-green-100"
+              required
             />
           </div>
-
 
           {/* Password */}
           <div>
@@ -65,11 +82,13 @@ const SellerLogin = () => {
 
             <input
               type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               placeholder="अपना पासवर्ड दर्ज करें"
               className="w-full rounded-lg border border-gray-300 px-4 py-3 outline-none transition focus:border-green-600 focus:ring-2 focus:ring-green-100"
+              required
             />
           </div>
-
 
           {/* Forgot Password */}
           <div className="text-right">
@@ -81,7 +100,6 @@ const SellerLogin = () => {
             </button>
           </div>
 
-
           {/* Login */}
           <button
             type="submit"
@@ -92,10 +110,8 @@ const SellerLogin = () => {
 
         </form>
 
-
         {/* Registration */}
         <div className="mt-7 border-t border-gray-200 pt-6 text-center">
-
           <p className="text-gray-600">
             अभी तक अकाउंट नहीं बनाया?
           </p>
@@ -107,11 +123,9 @@ const SellerLogin = () => {
           >
             Seller Registration करें
           </button>
-
         </div>
 
       </div>
-
     </div>
   );
 };
